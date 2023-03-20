@@ -1,6 +1,8 @@
+import Footer from "../components/component-recycle/Footer";
+
 function LoginRegister() {
     return ( <>
-    Loginpage
+    <Footer/>
     </> );
 }
 
