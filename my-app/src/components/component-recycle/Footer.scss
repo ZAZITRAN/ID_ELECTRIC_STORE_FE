@@ -64,12 +64,12 @@ $blackColor: #383838;
                         width: 400px;
                         height: 40px;
                         border: none;
-                        left: 0;
+
                     }
 
                     button {
                         position: absolute;
-                        left: 295px;
+                        left: 293px;
                         width: 105px;
                         height: 35px;
                         top: 89px;
@@ -90,6 +90,7 @@ $blackColor: #383838;
         border-bottom: 1px solid gray;
 
         .footer-title {
+
             width: 35%;
 
             h5 {
@@ -100,13 +101,54 @@ $blackColor: #383838;
                 font-size: 30px;
             }
 
-            span {
+            >span {
                 width: 50%;
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 15px;
                 line-height: 32px;
+                margin-bottom: 30px;
+            }
+
+            .call-mail {
+                margin: 30px 0;
+                font-weight: 400;
+                font-size: 18px;
+                color: $blackColor;
+
+                .call {
+                    margin-right: 30px ;
+                    display: flex;
+                    height: 24px;
+                       
+                    img {
+                        height: 24px;
+                        width: 24px;
+                    }
+                    p {    
+                      line-height: 24px;
+                        margin-bottom: 15px;
+                    }
+
+                   
+
+                }
+                .mail {
+                    display: flex;
+                    height: 24px;
+                       
+                    img {
+                        height: 24px;
+                        width: 24px;
+                    }
+                    p {    
+                      line-height: 24px;
+                        margin-bottom: 15px;
+                    }
+
+                }
+
             }
 
         }
@@ -122,57 +164,279 @@ $blackColor: #383838;
                 font-weight: 700;
                 font-size: 24px;
                 color: $blackColor;
-                padding: 0 0 0 40px;
+                padding: 0;
             }
-           
-            li{
+
+            li {
                 list-style-type: none;
                 margin-bottom: 10px;
             }
-            .footer-company{
+
+            .footer-company {
                 width: 30%;
                 text-align: center;
-                
+
             }
-            .footer-info{
+
+            .footer-info {
                 width: 35%;
-               /*  text-align: center; */
+                /*  text-align: center; */
             }
-            .footer-contact{
-              
+
+            .footer-contact {
                 width: 35%;
-                text-align: center;  
-                .img{
-                    padding: 0 5px;
+                text-align: center;
+
+                .img {
+                    width: 190px;
+                    margin: 0 auto;
                     display: flex;
                     justify-content: space-between;
-                    img{
+
+                    img {
                         width: 56px;
                         height: 56px;
                     }
                 }
-
-
             }
         }
     }
-    .footer-of-footer{
-      
+
+    .footer-of-footer {
         width: 80%;
         margin: 30px auto;
         display: flex;
         justify-content: space-between;
 
-        p{
+        p {
+            margin-top: 10px;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             color: $blackColor;
         }
-        img{
+
+        img {
             width: 128px;
-            height: 32px; 
+            height: 32px;
         }
     }
 }
+
+@media (min-width:1400px) {
+    .footer {
+        width: 100%;
+        height: max-content;
+
+        .header-of-footer {
+            width: 100%;
+            height: max-content;
+            background-color: $redColor;
+
+            .newLetter {
+                width: max-content;
+                display: flex;
+                padding: 0 10px;
+                justify-content: space-between;
+
+                margin: 0 auto;
+
+                .left-newLetter {
+                    height: 100%;
+                    display: flex;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin: 75px 32px 74px 0;
+                    }
+
+                    .newLetter-text {
+                        width: max-content;
+                        height: max-content;
+                        color: $whiteColor;
+
+                        p {
+                            margin-top: 69px;
+                            font-weight: 700;
+                            font-size: 36px;
+                            margin-bottom: 16px;
+                        }
+
+                        span {
+                            margin-bottom: 69px;
+                            font-weight: 400;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .right-newLetter {
+                    width: max-content;
+                    margin-left: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .footer {
+        .header-of-footer {
+            display: block;
+
+            .newLetter {
+                display: block;
+
+                .right-newLetter {
+                    margin: 0 auto;
+                    height: max-content;
+                    padding: 0;
+
+                    .right-newLetter-input {
+                        height: max-content;
+
+                        input {
+                            margin: 0 auto 30px auto;
+                        }
+
+                        button {
+                            top: 3px;
+                            left: 293px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .center-of-footer {
+            display: block;
+            text-align: center;
+
+            .footer-title {
+                width: 100%;
+
+                .call-mail {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .footer-about {
+                width: 100%;
+
+            }
+
+
+        }
+
+
+
+    }
+}
+
+@media ( max-width:600px) {
+    .footer {
+        .header-of-footer {
+            .newLetter {
+                width: 100%;
+
+                .left-newLetter {
+                    width: 90%;
+                    text-align: center;
+                    height: max-content;
+                    margin: 0 auto;
+
+                    img {
+                        display: none;
+                    }
+
+                    .newLetter-text {
+                        width: 100%;
+
+                        p {
+                            font-size: 25px;
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .right-newLetter {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .right-newLetter-input {
+                        width: 80%;
+                        margin: 0 auto;
+
+                        input {
+                            width: 100%;
+                            margin: 10px auto 20px auto;
+                        }
+
+                        button {
+                            width: 90px;
+                            top: 13px;
+                            left: calc(100% - 3px - 90px);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .center-of-footer {
+            .footer-title {
+                .call-mail {
+                    display: block;
+                    width: 100%;
+                    .call{
+                        
+                        justify-content: center;
+                    }
+                    .mail{
+                        justify-content: center;
+                    }
+                   
+                    
+                }
+            }
+
+            .footer-about {
+                display: block;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            li {
+                text-align: center;
+            }
+
+            .footer-company {
+                width: 100% !important;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+
+            .footer-info {
+                width: 100% !important;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+
+            .footer-contact {
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
