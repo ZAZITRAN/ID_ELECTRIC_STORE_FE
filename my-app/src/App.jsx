@@ -3,7 +3,7 @@ import './App.css';
 import { Route,Routes } from 'react-router-dom';
 import LoginRegister from './pages/LoginRegister';
 import HomePage from './pages/HomePage';
-import Countdown from './components/Countdown'
+
 
 
 function App() {
