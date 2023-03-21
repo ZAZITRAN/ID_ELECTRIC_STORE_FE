@@ -1,37 +1,68 @@
-import React from "react";
+import React , {useEffect , useState} from "react";
 import "./slide.scss"
 
 function Slide() {
-    
+  let arr = [
+    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
+    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
+    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
+    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
+
+  ]
+  const [data , setData] = useState(arr)
+  const [run1 , setRun] = useState(0)
+
+console.log(run1);
+    function handlelui() {
+      if (run1 > 0) {
+        setRun(run1 - 100)
+        
+      }else{
+        setRun(data.length * 100 - 100)
+      }
+    }
+    function handletien() {
+      if (run1 < data.length * 100 - 100) {
+        setRun(run1 + 100)
+        
+      }else{
+        setRun(0)
+      }
+    }
     return ( 
         <>
-      <div class="slide-container">
+      <div className="slide-container">
 
-       <div class="btn-cha">
+       <div className="btn-cha">
 
-       <div class="slide-btn left">
-       <i class="fa-solid fa-chevron-left"></i>
+       <div onClick={()=> handlelui()} className="slide-btn left">
+       <i className="fa-solid fa-chevron-left"></i>
        </div>
 
-    <div class="slide-btn right">
-      <i class="fa-solid fa-chevron-right"></i>
+    <div onClick={()=> handletien()} className="slide-btn right">
+      <i className="fa-solid fa-chevron-right"></i>
       </div>
 
       </div>
 
-      <div class="slide-show">
+      <div className="slide-show">
 
-           <div class="current-img">
-          <div class="current-img cr"></div>
-          <div class="current-img"></div>
-          <div class="current-img"></div>
-          <div class="current-img"></div>
+           <div className="current-img">
+          <div className="current-img cr"></div>
+          <div className="current-img"></div>
+          <div className="current-img"></div>
+          <div className="current-img"></div>
         </div>
-        <div class="slide-run" >
-           <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
-           <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
-           <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
-           <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
+        <div className="slide-run"
+        style={{ transform: `translateX(-${run1}%)`, cursor:"pointer" }}
+         >
+          { data.map((item , index)=>{
+              return (
+                     <img key={index} src={item} alt="" />
+                
+              )
+            })
+          }
 
         </div>
       </div>
@@ -43,16 +74,42 @@ function Slide() {
 
 
 
-  <div class="category">
+  <div className="category">
 
-    <div class="category__text">Category</div>
+    <div className="category__text">Category</div>
 
-    <div class="category__list">
+    <div className="category__list">
 
-      <div class="category__sun">
-            
-          <div class="sun-text">Computer Laptop</div>
+      <div className="category__sun">
+            <img src="imgSlide/Laptop.png" alt="" />
+          <div className="sun-text">Computer Laptop</div>
       </div>
+      <div className="category__sun">
+            <img src="imgSlide/Smartphone.png" alt="" />
+          <div className="sun-text">Mobile & Tablet</div>
+      </div>
+      <div className="category__sun">
+            <img src="imgSlide/Camera.png" alt="" />
+          <div className="sun-text">Camera</div>
+      </div>
+      <div className="category__sun">
+            <img src="imgSlide/Tv And Remote.png" alt="" />
+          <div className="sun-text">TV & Smart Box</div>
+      </div>
+      <div className="category__sun">
+            <img src="imgSlide/Air Conditioner.png" alt="" />
+          <div className="sun-text">Home Appliance</div>
+      </div>
+      <div className="category__sun">
+            <img src="imgSlide/Speaker.png" alt="" />
+          <div className="sun-text">Accessories</div>
+      </div>
+      <div className="category__sun">
+            <img src="imgSlide/Gamepad.png" alt="" />
+          <div className="sun-text">Other Categories
+</div>
+      </div>
+      
           
     </div>
     </div>
