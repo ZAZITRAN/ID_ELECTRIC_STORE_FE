@@ -12,7 +12,7 @@ function Slide() {
   const [data , setData] = useState(arr)
   const [run1 , setRun] = useState(0)
 
-console.log(run1);
+
     function handlelui() {
       if (run1 > 0) {
         setRun(run1 - 100)

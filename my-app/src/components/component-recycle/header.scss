@@ -205,6 +205,47 @@ header{
 
 
 
+@media only screen  and (min-width:1300px){
+    #center-input {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        border-radius: 5px;
+        margin-left: 10px;
+        background-color: rgba(211, 211, 211, 0.329);
+        caret-color: #F46B5B;
+        height: 40px;
+    }
+    .h-center .img1 {
+display: none;
+    }
+    .btn-seach {
+        width: 40px;
+    }
+    .h-right img {
+        width: 25px;
+        height: 25px;
+    }
+    .signin {
+        color: #F46B5B;
+        font-size: medium;
+        cursor: pointer;
+    }
+    .signup {
+        width: 100px;
+        height: 40px;
+        font-size: medium;
+
+    }
+    .list-btn-dieuhuong div {
+        margin-right: 25px;
+        font-size: small;
+        cursor: pointer;
+    }
+
+
+}
 /* tablet */
 @media only screen and (min-width:46.25em) and (max-width:63.9375em){
     .h-center{
