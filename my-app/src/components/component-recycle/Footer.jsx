@@ -26,8 +26,16 @@ function Footer() {
             <div className="center-of-footer">
                 <div className="footer-title">
                     <h5>Tronix</h5>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, sint dolor? Numquam quos ratione neque accusamus autem non vitae error, quas illum! Totam sed praesentium error magnam earum magni                      rem?</span>
-                    span .
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, sint dolor? Numquam quos ratione neque accusamus autem non vitae error, quas illum! Totam sed praesentium error magnam earum magni rem?</span><br />
+                    <div className="call-mail">
+                        <div className="call">
+                            <img src="./footerImg/Call.png" alt="" /><p>+1234567890</p>
+                        </div>
+
+                        <div className="mail">
+                            <img src="./footerImg/Email.png" alt="" />  <p>lorem@lorem.com</p> </div>
+                        </div>
+
 
                 </div>
                 <div className="footer-about">
