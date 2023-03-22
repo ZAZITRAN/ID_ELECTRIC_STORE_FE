@@ -340,8 +340,10 @@ $blackColor: #383838;
 @media ( max-width:600px) {
     .footer {
         .header-of-footer {
+            padding: 0;
             .newLetter {
                 width: 100%;
+                padding: 0;
 
                 .left-newLetter {
                     width: 90%;
