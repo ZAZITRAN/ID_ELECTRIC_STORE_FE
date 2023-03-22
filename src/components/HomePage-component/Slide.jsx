@@ -12,6 +12,25 @@ function Slide() {
   const [data , setData] = useState(arr)
   const [run1 , setRun] = useState(0)
 
+  useEffect(()=>{
+     const timer =  setInterval(() => {
+    if (run1 < data.length * 100 - 100) {
+      
+      setRun(prve => {
+        if (prve < data.length * 100 - 100) {
+          return prve + 100
+        }else{
+          prve = 0
+          return prve 
+
+        }
+        
+      })
+      
+    }
+  }, 5000);
+  return () => clearInterval(timer)
+  }, [])
 
     function handlelui() {
       if (run1 > 0) {
@@ -24,6 +43,7 @@ function Slide() {
     function handletien() {
       if (run1 < data.length * 100 - 100) {
         setRun(run1 + 100)
+
         
       }else{
         setRun(0)

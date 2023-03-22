@@ -3,6 +3,8 @@ import './App.css';
 import { Route,Routes } from 'react-router-dom';
 import LoginRegister from './pages/LoginRegister';
 import HomePage from './pages/HomePage';
+import Catalog from './pages/Catalog';
+
 
 
 
@@ -14,6 +16,8 @@ function App() {
     <Routes>
       <Route path='/home' element={<HomePage/>}/>
       <Route path='/login-register' element={<LoginRegister/>}/>
+      <Route path='/catalog' element={<Catalog/>}/>
+
   
 
 
