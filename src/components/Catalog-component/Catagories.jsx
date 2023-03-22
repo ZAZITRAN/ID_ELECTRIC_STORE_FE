@@ -1,5 +1,8 @@
 import './catagories.scss'
+import React , {useState} from 'react'
 function Catagories() {
+    const [inputpt , setInputpt] = useState(0)
+
     return ( <>
         <div className="catagories">
 
@@ -49,6 +52,18 @@ function Catagories() {
                         
                     </div>
                     <div className="thanhloc-keoPrice">
+
+                        <div className="thanhloc-keoPrice__text">Filter by Price</div>
+                        <div className="renge-input">
+                          <div className="renge-input__pt"><div className="fill" style={{width:`${inputpt}%`}}></div></div>
+                          <input onChange={(e) => setInputpt(e.target.value)} value={inputpt} min={0} max={100}  type="range" />
+                          
+
+                        </div>
+                        <div className="thanhloc-keoPrice__price">
+                            <div className="thanhloc-keoPrice__textpr">Price:</div>
+                            <div className="thanhloc-keoPrice__number">$100 - $250 </div>
+                        </div>
                         
                     </div>
                     <div className="thanhloc-location"></div>
