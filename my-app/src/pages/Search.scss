@@ -1,0 +1,356 @@
+$redColor: #F46B5B;
+$whiteColor: #FAFAFA;
+$blackColor: #383838;
+$grayColor: #D0D0D2;
+
+.center-search {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+
+    .center-left {
+        text-align: center;
+        width: 200px;
+        padding: 20px;
+
+        border: 1px solid $grayColor;
+        border-radius: 10px;
+
+        .catalog {
+            text-align: left;
+            height: 400px;
+            overflow-y: scroll;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            h5 {
+                margin-bottom: 5px;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                color: $blackColor;
+            }
+
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: $blackColor;
+
+            }
+
+
+        }
+
+        .search-price {
+            width: 95%;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            .menu-price {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+
+                .price-drop {
+                    >span {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $grayColor;
+
+                        span {
+                            font-weight: 400;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .search-location {
+            width: 95%;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $grayColor;
+
+            .menu-location {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+
+            .location-drop {
+                text-align: left;
+            }
+
+        }
+
+        .search-rate {
+            width: 95%;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $grayColor;
+
+            .menu-rate {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+
+            .rate-drop {
+                text-align: left;
+            }
+        }
+
+        .search-brand {
+            width: 95%;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            .menu-brand {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .search-promotion {
+            width: 95%;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            .menu-promotion {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .search-payment {
+            width: 95%;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            .menu-payment {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .search-shipment {
+            width: 95%;
+            border-bottom: 1px solid $grayColor;
+            margin-bottom: 10px;
+
+            .menu-shipment {
+                display: flex;
+                height: 24px;
+                justify-content: space-between;
+
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+            width: 150px;
+            height: 40px;
+        }
+
+        .reset {
+            color: $redColor;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+    /* RIGHT */
+    .center-right {
+        width: calc(100% - 200px);
+        padding-left: 20px;
+
+        .top-list {
+            display: flex;
+            justify-content: space-between;
+
+            .top-left {
+                p {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: $blackColor;
+                }
+            }
+
+            .top-right {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: $grayColor;
+            }
+        }
+        .list{
+            .product{
+                width: 100%;
+                display: flex;
+                padding: 5px;
+
+                    .img-box{
+                        width: 300px;
+                        height: 200px;
+
+                        img{
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                    .title{
+                        width: calc(100% - 300px);
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .left-title{
+                        margin-left: 10px;
+                        .rate-sold{
+                            display: flex;
+                        }
+
+                    }
+                  
+            }
+
+        }
+    }
+}
