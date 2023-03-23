@@ -64,3 +64,10 @@ margin-bottom: 50px;
         cursor: pointer;
     }
 }
+.center-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    height: 40px;
+}
