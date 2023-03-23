@@ -7,6 +7,7 @@ function Catagories() {
   return (
     <>
       <div className="catagories">
+
         <div className="catagories__toptext">
           <div className="catagories__textto">All Categories</div>
           <div className="catagories__textnho">
@@ -207,6 +208,7 @@ function Catagories() {
 
           </div>
         </div>
+        
       </div>
     </>
   );
