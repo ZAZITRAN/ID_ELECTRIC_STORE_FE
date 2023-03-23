@@ -1,6 +1,5 @@
 import "./toprate.scss"
 import "./flash.scss"
-import Countdown from "./Countdown";
 function Toprate() {
     return ( 
         <>

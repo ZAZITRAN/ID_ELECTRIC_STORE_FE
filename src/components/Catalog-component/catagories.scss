@@ -5,6 +5,7 @@ $main-color:#F46B5B;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
     .catagories__toptext{
         width: 100%;
         display: flex;
@@ -74,15 +75,53 @@ $main-color:#F46B5B;
 }
 .sp-loc{
     width: 78%;
+    display: flex;
+    flex-direction: column;
+    
 }
+.list-sques{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    .sques-sun{
+        width: 22%;
+        height: 93px;
+        border-radius: 20px;
+        border: 1px solid rgba(128, 128, 128, 0.525);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        cursor: pointer;
+        .sques-sun__img{
+            height: 35px;
+            width: 35px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .sques-sun__text{
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    }
+}
+
 .thanhloc-keoPrice{
     margin-top: 20px;
+    padding-top: 10px;
+    
     width: 100%;
     border-top: 1px solid rgba(128, 128, 128, 0.468) ;
     .thanhloc-keoPrice__text{
         font-size: small;
         margin-top: 10px;
         font-weight: 550;
+        margin-bottom: 10px;
 
     }
     .renge-input{
@@ -106,7 +145,7 @@ $main-color:#F46B5B;
 
         }
     }
-    input{
+    .input-keo{
         -webkit-appearance: none;
         width: 100%;
         outline: none;
@@ -116,10 +155,7 @@ $main-color:#F46B5B;
         background-color: transparent;
         
     }
-    .bar-nen{
-
-    }
-    input::-webkit-slider-thumb{
+    .input-keo::-webkit-slider-thumb{
         -webkit-appearance: none;
           width: 18px;
           height: 18px;
@@ -129,7 +165,92 @@ $main-color:#F46B5B;
           z-index: 2;
 
     }
+    .thanhloc-keoPrice__price{
+        display: flex;
+        margin-top: 25px;
+        .thanhloc-keoPrice__textpr{
+            color: rgba(128, 128, 128, 0.614);
+            font-size: 14px;
+            
+        }
+        .thanhloc-keoPrice__number{
+            font-size: 15px;
+            font-weight: 550;
+            margin-left: 2px;
+        }
+    }
     
 
+}
+.location-sun{
+    display: flex;
+    align-items: center;
+    .location-sun__name{
+        margin-left: 10px;
+    }
+    input[type="checkbox"] {
+        margin: 5px;
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border: none;
+        accent-color:$main-color;
+        border-radius: 0;
+
+      }
+      .location-sun__name{
+        color: #F46B5B;
+        font-size: 14px;
+      }
+      
+
+}
+.featured-brand{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .featured-brand-name{
+        font-size: large;
+        font-weight: 550;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    .list-featured-brand__img{
+        display: flex;
+        align-items: center;
+        .featured-brand__img{
+            width: 22%;
+            height: 30px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 117px;
+            max-height: 30px;
+            
+        }
+        .featured-brand__img.one{
+            padding: 3px 20px;
+        }
+        .featured-brand__img.two{
+          padding: 0 35px;
+          margin-top: 10px;
+        }
+        .featured-brand__img.three{
+          padding: 5px 30px;
+
+        }
+        .featured-brand__img.four{
+            padding: 5px 55px;
+
+        }
+        .featured-brand__img.five{
+            padding: 5px 40px;
+
+        }
+    }
 }
   
