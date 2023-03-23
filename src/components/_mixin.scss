@@ -1,0 +1,21 @@
+@mixin largeText {
+    font-size: xx-large;
+}
+@mixin largeTextUp {
+    font-size: xx-large;
+    font-weight: 650;
+}
+@mixin mediumText {
+    font-size: large;
+}
+@mixin mediumTextUP {
+    font-size: large;
+    font-weight: 550;
+}
+@mixin smallText {
+    font-size: small;
+}
+@mixin smallTextUp {
+    font-size: small;
+    font-weight: 750;
+}

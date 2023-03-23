@@ -7,6 +7,7 @@ import Catalog from './pages/Catalog';
 import Search from './pages/Search';
 import MyCart from './pages/MyCart';
 import Checkout from './pages/Checkout';
+import Blogpage from './pages/Blogpage'
 
 
 
@@ -23,8 +24,10 @@ function App() {
       <Route path='/catalog' element={<Catalog/>}/>
       <Route path='/search' element={<Search/>}/>
       <Route path='/mycart' element={<MyCart/>}>
-          <Route path='checkout'element ={<Checkout/>}/>
+      <Route path='checkout'element ={<Checkout/>}/>
       </Route>
+
+      <Route path='/blog'element ={<Blogpage/>}/>
 
 
     </Routes>
