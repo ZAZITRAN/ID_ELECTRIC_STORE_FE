@@ -1,6 +1,6 @@
 import "./headercata.scss"
 function Header(pros) {
-  console.log(pros.textBlog);
+
     return ( 
         <>
   <header className="header">
