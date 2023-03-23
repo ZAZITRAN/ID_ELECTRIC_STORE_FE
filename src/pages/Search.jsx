@@ -199,7 +199,7 @@ function Search() {
                                 <p>Filter by Location</p><img src="./Search/down.png" alt="" className="drop-icon" />
                             </div>
 
-                            <Form.Item className="location-drop">
+                            <div className="location-drop">
                                 <ConfigProvider
                                     theme={{
                                         token: {
@@ -212,14 +212,14 @@ function Search() {
                                     <Checkbox>Sumatra</Checkbox><br />
                                     <Checkbox>Palembang</Checkbox>
                                 </ConfigProvider>
-                            </Form.Item>
+                            </div>
                         </div>
 
                         <div className="search-rate">
                             <div className="menu-rate">
                                 <p>Filter by Rate</p><img src="./Search/down.png" alt="" className="drop-icon" />
                             </div>
-                            <Form.Item className="rate-drop">
+                            <div className="rate-drop">
                                 <ConfigProvider
                                     theme={{
                                         token: {
@@ -234,7 +234,7 @@ function Search() {
                                     <Checkbox>⭐⭐⭐⭐⭐</Checkbox>
                                 </ConfigProvider>
 
-                            </Form.Item>
+                            </div>
                         </div>
                         <div className="search-brand">
                             <div className="menu-brand">
@@ -287,48 +287,63 @@ function Search() {
                         <List
 
                             pagination={{
-                                pageSize: 6
+                                pageSize: 5
                             }}
 
                             dataSource={data}
                             renderItem={(item, index) => (
                                 <List.Item key={index}>
                                     <div onClick={() => handerClick(item.id)} className="product">
-                                        <div className="img-box">
-                                            <img src={item.img} alt="" />
-                                        </div>
-                                        <div className="title">
-                                            <div className="left-title">
-                                                <div className="rate-sold">
-                                                    <div className="rate">
-                                                        <p> {item.stars}.0  </p>
-                                                        <p>{item.stars === 5 ? "⭐⭐⭐⭐⭐" : item.stars === 4 ? "⭐⭐⭐⭐" : item.stars === 3 ? "⭐⭐⭐" : item.stars === 2 ? "⭐⭐" : "⭐"} </p>
+                                        <div className="product-no-media">
+                                            <div className="img-box">
+                                                <img src={item.img} alt="" /><br />
+
+                                            </div>
+
+                                            <div className="title">
+                                                <div className="left-title">
+                                                    <div className="rate-sold">
+                                                        <div className="rate">
+                                                            <p className="rate-point"> {item.stars}.0  </p>
+                                                            <div className="rate-stars"><p>{item.stars === 5 ? "⭐⭐⭐⭐⭐" : item.stars === 4 ? "⭐⭐⭐⭐" : item.stars === 3 ? "⭐⭐⭐" : item.stars === 2 ? "⭐⭐" : "⭐"} </p></div>
+                                                        </div>
+                                                        <div className="review">
+                                                            <p> Review ({item.review})</p>
+                                                        </div>
+                                                        <div className="sold">
+                                                            <p> Sold ({item.sold}) </p>
+                                                        </div>
+
                                                     </div>
-                                                    <div className="review">
-                                                        <p> Review ({item.review})</p>
-                                                    </div>
-                                                    <div className="sold">
-                                                        <p> Sold ({item.sold}) </p>
-                                                    </div>
-                                                   
-                                                </div>
-                                                <div className="name">
+                                                    <div className="name">
                                                         <p> {item.name} {item.id}</p>
                                                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, excepturi.</span><br />
-                                                        <Button onClick={() => addToCart(item.id)} className="btn"> Art To Card</Button>
+
                                                     </div>
-                                            </div>
-                                            <div className="price">
-                                                <p className="old-price">${item.price}</p>
-                                                <p className="new-price">${item.salePrice}</p>
-                                                <div className="wishlist">
-                                                    <img src="./Search/heart.png" alt="" />
-                                                    <p> Add To Wishlist</p>
+                                                    <Button type="primary" onClick={() => addToCart(item.id)} className="btn"> Art To Card</Button>
                                                 </div>
+                                                <div className="price">
+                                                    <p className="old-price">${item.price}</p>
+                                                    <p className="new-price">${item.salePrice}</p>
+                                                    <div className="wishlist">
+                                                        <img src="./Search/heart.png" alt="" />
+                                                        <p> Add To Wishlist</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="media">
+                                            <Button type="primary" onClick={() => addToCart(item.id)} className="btn-media"> Art To Card</Button>
+                                            <p className="old-price-media">${item.price}</p>
+                                            <p className="new-price-media">${item.salePrice}</p>
+                                            <div className="wishlist-media">
+                                                <img src="./Search/heart.png" alt="" />
+                                                <p> Add To Wishlist</p>
                                             </div>
                                         </div>
 
                                     </div>
+
                                 </List.Item>
                             )} />
                     </div>
