@@ -15,7 +15,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Palembang"
         },
         {
             id: 2,
@@ -25,7 +26,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Jakarta"
         },
         {
             id: 3,
@@ -35,7 +37,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Palembang"
         },
         {
             id: 3,
@@ -45,7 +48,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Sumatra"
         },
         {
             id: 4,
@@ -55,7 +59,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Palembang"
         },
         {
             id: 5,
@@ -65,7 +70,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Java"
         },
         {
             id: 6,
@@ -85,7 +91,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Jakarta"
         },
         {
             id: 8,
@@ -95,7 +102,8 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Palembang"
         },
         {
             id: 9,
@@ -105,7 +113,9 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Sumatra"
+
         },
         {
             id: 10,
@@ -115,7 +125,9 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Palembang"
+
         },
         {
             id: 11,
@@ -125,7 +137,9 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Jakarta"
+
         },
         {
             id: 12,
@@ -135,9 +149,18 @@ function Search() {
             review: 7,
             sold: 99,
             price: 39.99,
-            salePrice: 29.99
+            salePrice: 29.99,
+            address:"Java"
         }
     ]
+    let adress=[]
+    let rate=[]
+    for (let i = 0; i < array.length; i++) {
+        adress.push(data[i].address)
+        rate.push(data[i].push)       
+    }
+    let adressCheckbox= new Set(adress)
+    
     const [column, setColumn] = useState(1)
     const handerClick = (id) => {
         console.log(id);
@@ -207,8 +230,8 @@ function Search() {
                                         },
                                     }}
                                 >
-                                    <Checkbox>Jakarta</Checkbox><br />
-                                    <Checkbox>Java</Checkbox><br />
+                                    <Checkbox name="Jakarta">Jakarta</Checkbox><br />
+                                    <Checkbox >Java</Checkbox><br />
                                     <Checkbox>Sumatra</Checkbox><br />
                                     <Checkbox>Palembang</Checkbox>
                                 </ConfigProvider>
