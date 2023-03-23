@@ -8,6 +8,7 @@ import Search from './pages/Search';
 import MyCart from './pages/MyCart';
 import Checkout from './pages/Checkout';
 import Blogpage from './pages/Blogpage'
+import BlogList from './components/Blog-component/BlogList';
 
 
 
@@ -28,6 +29,8 @@ function App() {
       </Route>
 
       <Route path='/blog'element ={<Blogpage/>}/>
+      <Route path='/bloglist'element ={<BlogList/>}/>
+
 
 
     </Routes>
