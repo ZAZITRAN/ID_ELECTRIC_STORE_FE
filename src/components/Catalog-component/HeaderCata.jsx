@@ -1,5 +1,6 @@
 import "./headercata.scss"
-function Header() {
+function Header(pros) {
+  console.log(pros.textBlog);
     return ( 
         <>
   <header className="header">
@@ -66,7 +67,7 @@ function Header() {
   <div className="chuyenPage">
     <div className="chuyenPage__home">Home</div>
     <div className="chuyenPage__arrow"><i class="fa-solid fa-angle-right"></i></div>
-    <div className="chuyenPage__allcata">All Catagories</div>
+    <div className="chuyenPage__allcata">{ pros.textBlog == 'Blog' ? pros.textBlog : 'All Catagories'}</div>
     
     
   </div>
