@@ -36,13 +36,16 @@ let productReducer = (state = initialState, action) => {
                 price: payload.price,
                 number: 1,
                 name: payload.name,
-                isChecker :true
+                isChecker: payload.isChecker
+
             })
-            axios.post("http://localhost:3000/cart", {
+            axios.post("http://localhost:8080/cart", {
                 id: payload.id,
                 price: payload.price,
                 number: 1,
-                name: payload.name
+                name: payload.name,
+                isChecker: payload.isChecker
+
             })
                 .then(function (response) {
                     console.log(response);
@@ -59,12 +62,14 @@ let productReducer = (state = initialState, action) => {
         }
 
         cart[findIndex].number = cart[findIndex].number + 1;
-        axios.put(`http://localhost:3000/cart/${cart[findIndex].id}`,
+        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
             {
                 id: cart[findIndex].id,
                 name: cart[findIndex].name,
                 price: cart[findIndex].price,
-                number: cart[findIndex].number
+                number: cart[findIndex].number,
+                isChecker: cart[findIndex].isChecker
+
             })
             .then(function (response) {
                 console.log(response);
@@ -85,7 +90,7 @@ let productReducer = (state = initialState, action) => {
         console.log(findIndex);
         cart.splice(findIndex,1)
        
-        axios.delete(`http://localhost:3000/cart/${payload}`)
+        axios.delete(`http://localhost:8080/cart/${payload}`)
             .then(function (response) {
                 console.log(response);
             })
@@ -104,12 +109,14 @@ let productReducer = (state = initialState, action) => {
         let { cart } = state
         let findIndex = cart.findIndex((e, i) => e.id === payload.id)
         cart[findIndex].number = cart[findIndex].number - 1;
-        axios.put(`http://localhost:3000/cart/${cart[findIndex].id}`,
+        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
             {
                 id: cart[findIndex].id,
                 name: cart[findIndex].name,
                 price: cart[findIndex].price,
-                number: cart[findIndex].number
+                number: cart[findIndex].number,
+                isChecker: cart[findIndex].isChecker
+
             })
             .then(function (response) {
                 console.log(response);
@@ -128,12 +135,14 @@ let productReducer = (state = initialState, action) => {
         let findIndex = cart.findIndex((e, i) => e.id === payload.id)
         cart[findIndex].number = cart[findIndex].number + 1;
 
-        axios.put(`http://localhost:3000/cart/${cart[findIndex].id}`,
+        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
             {
                 id: cart[findIndex].id,
                 name: cart[findIndex].name,
                 price: cart[findIndex].price,
-                number: cart[findIndex].number
+                number: cart[findIndex].number,
+                isChecker: cart[findIndex].isChecker
+
             })
             .then(function (response) {
                 console.log(response);
@@ -146,9 +155,116 @@ let productReducer = (state = initialState, action) => {
             cart: [...cart]
         }
     }
-    
+    if(action.type==="remove-checker"){
+        let { payload } = action
+        let { cart } = state
+        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
+        cart[findIndex].isChecker=false;
+
+        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
+            {
+                id: cart[findIndex].id,
+                name: cart[findIndex].name,
+                price: cart[findIndex].price,
+                number: cart[findIndex].number,
+                isChecker: cart[findIndex].isChecker
+
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        return {
+            ...state,
+            cart: [...cart]
+        }
+
+    }
+    if(action.type==="checker"){
+        let { payload } = action
+        let { cart } = state
+        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
+        cart[findIndex].isChecker=true;
+
+        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
+            {
+                id: cart[findIndex].id,
+                name: cart[findIndex].name,
+                price: cart[findIndex].price,
+                number: cart[findIndex].number,
+                isChecker: cart[findIndex].isChecker
+
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        return {
+            ...state,
+            cart: [...cart]
+        }
+
+    }
+    if(action.type ==="remove-all"){
+        let { cart } = state
+        for (let i = 0; i < cart.length; i++) {
+            cart[i].isChecker=false
+            axios.put(`http://localhost:8080/cart/${cart[i].id}`,
+            {
+                id: cart[i].id,
+                name: cart[i].name,
+                price: cart[i].price,
+                number: cart[i].number,
+                isChecker:cart[i].isChecker
+
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+        return {
+            ...state,
+            cart: [...cart]
+        }
+    }
+    if(action.type ==="check-all"){
+        let { cart } = state
+        for (let i = 0; i < cart.length; i++) {
+            cart[i].isChecker=true
+            axios.put(`http://localhost:8080/cart/${cart[i].id}`,
+            {
+                id: cart[i].id,
+                name: cart[i].name,
+                price: cart[i].price,
+                number: cart[i].number,
+                isChecker:cart[i].isChecker
+
+            })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+        return {
+            ...state,
+            cart: [...cart]
+        }
+    }
+
+    return state;
 
 };
+
+/* store chua cac reducer */
 const store = createStore(productReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 export default store;

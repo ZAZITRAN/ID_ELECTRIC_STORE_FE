@@ -5,7 +5,7 @@ $grayColor: #D0D0D2;
 
 .cart {
     margin: 50px auto;
-    width: 90%;
+    width: 100%;
 
     .cart-title {
         width: 100%;
@@ -67,12 +67,12 @@ $grayColor: #D0D0D2;
     }
 
     .cart-info {
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
         display: flex;
 
         .cart-list {
-            width: 70%;
+            width: calc(100% - 400px);
 
             .select-all {
                 display: flex;
@@ -131,6 +131,7 @@ $grayColor: #D0D0D2;
                                 justify-content: space-between;
 
                                 .img {
+                                    border: none;
                                     height: 40px;
                                     width: 40px;
 
@@ -162,15 +163,16 @@ $grayColor: #D0D0D2;
 
         .pay-box {
             margin-left: 20px;
-            width: 30%;
+            width: 400px;
 
             .coupon {
-                width: 500px;
+                margin: 0 auto;
+                width: 350px;
                 height: 104px;
                 display: flex;
                 justify-content: space-between;
                 background-color: $grayColor;
-                padding: 26px 50px;
+                padding: 26px 5px;
                 border-radius: 10px;
                 margin-bottom: 15px;
 
@@ -195,10 +197,10 @@ $grayColor: #D0D0D2;
             }
 
             .summary-box {
-                margin-top: 40px;
+                margin: 40px auto;
                 text-align: center;
                 padding: 30px;
-                width: 500px;
+                width: 350px;
                 height: 340px;
                 border: 1px solid $redColor;
                 border-radius: 10px;
@@ -254,6 +256,180 @@ $grayColor: #D0D0D2;
                 color: $redColor;
             }
         }
+        .pay-box-media{
+            display: none;
+            width: 100%;
+            .pay-top{
+                width: 100%;
+                text-align: left;
+                background-color: $grayColor;
+                .coupon{          
+                    width: 350px;
+                    height: 104px;
+                    display: flex;
+                    justify-content: space-between;
+                  
+                    padding: 26px 5px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+    
+                    .icon {
+                        width: 56px;
+                        height: 56px;
+                    }
+    
+                    p {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 52px;
+                        color: $blackColor;
+                    }
+    
+                    .drop {
+                        margin-top: 9px;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
 
+            }
+            .pay-center{
+                border: 1px solid $redColor;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 30px;
+                .summary-box{
+                text-align: center;
+                
+              
+               
+
+                .summary {
+                    text-align: left;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: $blackColor;
+                }
+
+                .total-box {
+                    display: flex;
+                    width: 150px;
+                    height: 36px;
+                    justify-content: space-between;
+                    margin: 40px 0 45px 0;
+
+                    .text {
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: $grayColor;
+                        line-height: 36px;
+                    }
+
+                    .price {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 36px;
+                        color: $redColor;
+
+                    }
+
+                }
+               
+                }
+            }
+             .pay-button{
+                    button {
+                        width: 80%;
+                        height: 64px;
+                        background-color: $redColor;
+                        color: $whiteColor;
+                        font-weight: 500;
+                        font-size: 18px;
+                        margin: 0 auto;
+                        border-radius: 10px;
+                    }
+        
+                    .continue {
+                        font-weight: 500;
+                        font-size: 18px;
+                        margin-top: 32px;
+                        color: $redColor;
+                    }
+                }
+        }
+
+    }
+    
+}
+@media (max-width:1100px){
+    .cart-info{
+        display: block !important;
+        .cart-list{
+            width: 90% !important;
+            margin-bottom: 30px;
+        }
+        .pay-box{
+            display: none;
+            /* margin: 0 auto;
+            text-align: center;
+            width: 90% !important; */
+        }
+        .pay-box-media{
+            display: block !important;
+        }
+    }
+}
+@media (max-width:610px ) {
+    .cart-list{
+        width: 90% !important;
+        margin:  0 auto ;
+        .product-cart{
+            position: relative;
+            display: block !important;
+            .product-info{
+                display: block !important;
+                .img-product{
+                    margin: 0 auto !important;
+                }
+                .right-list{
+                    width: 100% !important;
+                    display: block !important;
+                    .bill-product{
+                        width: 100%;
+                        margin: 0 auto;
+                        text-align: center;
+                        .quantity{
+                            margin: 0 auto;
+                        }
+                        
+                    }
+                    .remove{
+                        margin-top: 0;
+                        padding: 0;
+                        position: absolute;
+                        right: 0;
+                        top :0;
+                        margin: 0;
+                        padding: 0;
+                        img{
+                            margin-top: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:420px){
+    .pay-center{
+       
+        text-align: center;
+        display: block !important;
+        .total-box{
+            width: 100% !important;
+        }
     }
 }
