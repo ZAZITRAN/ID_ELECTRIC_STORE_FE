@@ -3,7 +3,10 @@ import "./bloglist.scss";
 import "../HomePage-component/blog.scss";
 import HeaderCata from "../Catalog-component/HeaderCata";
 import Footer from "../component-recycle/Footer";
+import { useParams } from "react-router-dom";
 function BlogList() {
+  let {id} = useParams()
+  console.log(id);
   let arr = [1, 1, 1];
   return (
     <>
@@ -21,7 +24,7 @@ function BlogList() {
         <div className="blog-page__body">
           <div className="blog-body-filter">
             <div className="blog-body-filter__search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
               <input type="text" placeholder="Search..." />
             </div>
 
@@ -30,27 +33,27 @@ function BlogList() {
 
               <div className="blog-body-filter__listtext">
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Technology</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Blog</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Gadget</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Gaming</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Reviews</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>News</div>
                 </div>
               </div>
@@ -139,15 +142,15 @@ function BlogList() {
             </div>
             <div className="blog-detail__lichcomment">
               <div className="blog-detail__lichjune">
-                <img src="blogListImg/Calendar.png" alt="" />
+                <img src="/blogListImg/Calendar.png" alt="" />
                 <div>12 June 2021</div>
               </div>
               <div className="blog-detail__byaminone">
-                <img src="blogListImg/User.png" alt="" />
+                <img src="/blogListImg/User.png" alt="" />
                 <div>by Admin One</div>
               </div>
               <div className="blog-detail__comment12">
-                <img src="blogListImg/Comment.png" alt="" />
+                <img src="/blogListImg/Comment.png" alt="" />
                 <div>12 Comments</div>
               </div>
             </div>
@@ -206,9 +209,9 @@ function BlogList() {
               <div className="share">
                 <div className="share__text">Share:</div>
                 <div className="share__tbt">
-                  <img src="blogListImg/Facebook.png" alt="" />
-                  <img src="blogListImg/Twitter.png" alt="" />
-                  <img src="blogListImg/bx_bx-share-alt.png" alt="" />
+                  <img src="/blogListImg/Facebook.png" alt="" />
+                  <img src="/blogListImg/Twitter.png" alt="" />
+                  <img src="/blogListImg/bx_bx-share-alt.png" alt="" />
                 </div>
               </div>
             </div>

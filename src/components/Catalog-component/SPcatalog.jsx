@@ -43,7 +43,7 @@ function SPcatalog() {
 
               <div className="heart-add">
               <div className="fa-star__addcart cata">Add to Cart</div>
-              <i class="fa-solid fa-heart"></i>
+              <i className="fa-solid fa-heart"></i>
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ function App() {
       </Route>
 
       <Route path='/blog'element ={<Blogpage/>}/>
-      <Route path='/bloglist'element ={<BlogList/>}/>
+      <Route path='/bloglist/:id'element ={<BlogList/>}/>
 
 
 
