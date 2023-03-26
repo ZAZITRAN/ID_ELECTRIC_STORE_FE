@@ -1,5 +1,4 @@
 
-
 import { Route,Routes } from 'react-router-dom';
 import LoginRegister from './pages/LoginRegister';
 import HomePage from './pages/HomePage';
@@ -25,7 +24,7 @@ function App() {
       <Route path='/catalog' element={<Catalog/>}/>
       <Route path='/search' element={<Search/>}/>
       <Route path='/mycart' element={<MyCart/>}>
-      <Route path='checkout'element ={<Checkout/>}/>
+         <Route path='checkout' element ={<Checkout/>}/>
       </Route>
 
       <Route path='/blog'element ={<Blogpage/>}/>
