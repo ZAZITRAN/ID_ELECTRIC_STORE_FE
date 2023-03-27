@@ -166,7 +166,28 @@ function BlogForm() {
                 }
               </div>
             </div>
+            <div className="pagination">
+
+<div className="pagination__left">
+  <i class="fa-solid fa-chevron-left"></i>
+  <div className="fa-chevron-left__text">Previous</div>
+</div>
+
+<div className="pagination__number">
+  <div className="pagination__1 target">1</div>
+  <div className="pagination__2">2</div>
+  <div className="pagination__3">3</div>
+</div>
+
+<div className="pagination__right">
+  <div className="fa-chevron-left__text">Next</div>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+
+
+</div>
           </div>
+          
 
 
 

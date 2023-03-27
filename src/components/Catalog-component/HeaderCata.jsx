@@ -1,5 +1,6 @@
 import "./headercata.scss"
 import { useParams } from "react-router-dom";
+import "../component-recycle/header.scss"
 function Header(pros) {
 let {id} = useParams()
 console.log(id);

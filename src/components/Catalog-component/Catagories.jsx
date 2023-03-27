@@ -17,6 +17,7 @@ function Catagories() {
         </div>
 
         <div className="catagories__body">
+
           <div className="thanhloc">
             <div className="thanhloc-scroll">
               <div className="thanhloc-scroll__name">All Categories</div>
@@ -105,7 +106,55 @@ function Catagories() {
                 <div className="location-sun__name">Surabaya</div>
               </div>
             </div>
-            <div className="thanhloc-vote"></div>
+            <div className="thanhloc-location thanhloc-keoPrice">
+              <div className="thanhloc-keoPrice__text">Filter by Rating</div>
+
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                  
+               </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div className="filter-btn">Filter</div>
+            <div className="resetfilter-btn">Reset Filter</div>
+
           </div>
 
           <div className="sp-loc">
