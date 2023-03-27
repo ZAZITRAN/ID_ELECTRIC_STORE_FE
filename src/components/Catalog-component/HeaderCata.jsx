@@ -1,4 +1,5 @@
 import "./headercata.scss"
+import "../component-recycle/header.scss"
 function Header(pros) {
 
     return ( 
