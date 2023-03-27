@@ -1,0 +1,348 @@
+$redColor: #F46B5B;
+$whiteColor: #FAFAFA;
+$blackColor: #383838;
+$grayColor: #D0D0D2;
+
+.detail {
+    display: flex;
+    width: 90%;
+    margin: 100px auto;
+
+    .slide {
+        width: 50%;
+
+        .slick-slider {
+            margin: 0 auto;
+            width: 80%;
+
+            .slick-dot {
+                margin: 0 auto;
+                width: 220px;
+                list-style-type: none;
+                display: flex !important;
+                justify-content: space-between;
+
+                img {
+                    width: 70px;
+                }
+            }
+
+            .slick.list {
+                width: 50%;
+            }
+
+            .slick-arrow {
+                background-color: $grayColor;
+
+                ::before {
+                    background-color: $grayColor;
+                }
+            }
+
+        }
+
+    }
+
+    .title {
+        width: 50%;
+
+        .wishlist-review {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .wishlist-review-left {
+                width: 100%;
+                display: flex;
+                height: 27px;
+                width: 308px;
+                justify-content: space-between;
+
+                .rate {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $blackColor;
+                }
+
+                .stars {
+                    line-height: 27px;
+
+                }
+
+                .review {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $grayColor;
+                }
+
+                .sold {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $grayColor;
+                }
+            }
+
+            .wishlist {
+                display: flex;
+                height: 24px;
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                }
+                p{
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .info {
+            .name {
+                font-weight: 400;
+                font-size: 36px;
+                color: $blackColor;
+            }
+
+            .price-sale {
+                margin-top: 15px;
+                height: 42px;
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+
+                .price {
+                    p {
+                        font-weight: 700;
+                        font-size: 36px;
+                        color: $blackColor;
+                        line-height: 42px;
+                    }
+                }
+
+                .old-price {
+                    p {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 42px;
+                    }
+                }
+
+                .sale {
+                    border: 1px solid $redColor;
+                    border-radius: 5px;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: $redColor;
+                        line-height: 42px;
+                    }
+                }
+            }
+
+            .delivery {
+                margin-top: 15px;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .deli {
+                    height: 32px;
+                    width: 160px;
+                }
+
+                .voucher {
+                    width: 212px;
+                    height: 32px;
+                }
+
+                .stock {
+                    width: 118px;
+                    height: 32px;
+                }
+
+            }
+
+            .descrip {
+                margin-top: 10px;
+
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+
+            .quantity-button {
+                margin-top: 30px;
+                display: flex;
+               
+                justify-content: space-between;
+                
+                .quantity {
+                    position: relative;
+                    width: 220px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 40px;
+                    }
+                }
+                .in-de{
+                    width: 120px;
+                    height: 40px;
+                    display: flex;
+                    .img{
+                        
+                        width: 40px;
+                        height: 40px;
+                        border: none;
+                        img{
+                            width: 40px;
+                        }
+                        
+                    }
+                    input{
+                        width: 40px;
+                        height: 100%;
+                        line-height: 40px;
+                        
+                       
+                    }
+                }
+                .button{
+                    display: flex;
+                        .chat{
+                            width: 80px;
+                            height: 40px;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 40px;
+                            color:$redColor;
+                            margin-right: 10px;
+                        }
+                        .add-cart{
+                            width: 120px;
+                            height: 40px;
+                            background-color: $redColor;
+                            color: $whiteColor;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                        
+                }
+                
+            }
+            .wishlist-media{
+                display: none;
+                
+                height: 24px;
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                }
+                p{
+                    line-height: 24px;
+                }
+            }
+           
+
+        }
+        
+    }
+
+
+}
+
+.review-box{
+    margin-top: 50px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    .review{
+        width: 50%;
+    }
+    .add-review{
+        width: 50%;
+        .review-title{
+                p{
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $blackColor;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: $grayColor;
+                }
+        }
+    }
+
+}
+@media (max-width:1120px) {
+    .detail{
+        display: block;
+        .slide{
+            width: 100%;         
+        }
+        .title{
+            width: 100%;
+            margin-top: 30px;
+
+            .wishlist-media{
+                display: none ;
+            }
+        }
+       
+    }
+    .review-box{
+        display: block;
+        .review{
+            width: 100%;
+        }
+        .add-review{
+            width: 100%;
+        }
+    }
+}
+@media (max-width:550px) {
+    .title{
+        .wishlist-review{
+            .wishlist{
+                display: none !important;
+            }
+        }
+        .delivery{
+            display: block !important;
+        }
+        .quantity-button{
+            display: block !important;
+            .button{
+                width: 100% !important;
+                justify-content: center;
+                margin-top: 20px;
+            }
+        }
+        .wishlist-media{
+            margin-top: 30px;
+            display: flex!important;
+        }
+    }
+}
+    
+@media (max-width:420px) {
+    .price-sale{
+        width: 100% !important;
+    }
+}
