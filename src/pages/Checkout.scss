@@ -1,0 +1,268 @@
+$redColor: #F46B5B;
+$whiteColor: #FAFAFA;
+$blackColor: #383838;
+$grayColor: #D0D0D2;
+
+
+.checkout {
+
+
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+
+    .title {
+        width: 100%;
+        text-align: center;
+
+        .h1 {
+            font-weight: 700;
+            font-size: 48px;
+        }
+    }
+
+    .center {
+        display: flex;
+        width: 100%;
+
+        .center-info {
+            text-align: left;
+            width: 100%;
+
+            .form {
+                display: flex;
+                padding: 15px;
+                width: 100%;
+
+                .buyer-info {
+                    border-bottom: 1px solid $grayColor;
+                    margin-bottom: 20px;
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: $blackColor;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .left-form {
+                    padding-right: 30px;
+                    width: calc(100% - 350px);
+
+                    .input-form {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .left-input {
+                            width: 50%;
+                            padding-right: 15px;
+
+
+                        }
+
+                        .right-input {
+                            width: 50%;
+                            
+                        }
+                    }
+
+
+                }
+
+                .left-form-media {
+                    display: none;
+                }
+
+                .right-form {
+                    padding: 20px 15px;
+                    text-align: center;
+                    width: 350px;
+                    border-radius: 10px;
+                    border: 1px solid $grayColor;
+
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+
+                    .list-order {
+                        padding-bottom: 20px;
+                        width: 100%;
+                        border-bottom: 1px solid $grayColor;
+
+                        .order {
+                            width: 100%;
+                            height: 30px;
+                            display: flex;
+
+                            .quantity {
+                                width: 25px;
+                                font-weight: 500;
+                                font-size: 18px;
+                                color: $blackColor;
+                            }
+
+                            .name-price {
+                                width: calc(100% - 25px);
+                                padding-left: 5px;
+                                display: flex;
+                                justify-content: space-between;
+
+                                .name {
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    color: $blackColor;
+                                    line-height: 30px;
+                                }
+
+                                .price {
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    color: $blackColor;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .bill{
+                    padding: 20px 0;
+                    border-bottom: 1px solid $grayColor;
+                    .total-sub{
+                        display: flex;
+                        justify-content: space-between;
+                        h5{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                        p{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                    }
+                    .shipping{
+                        display: flex;
+                        justify-content: space-between;
+                        h5{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                        p{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                    }
+                    .tax{
+                        display: flex;
+                        justify-content: space-between;
+                        h5{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                        p{
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: $blackColor;
+                        }
+                    }
+                }
+                .total{
+                    border-bottom: 1px solid $grayColor;
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    h5{
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: $blackColor;
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 24px;
+                        color: $redColor;
+                    }
+                }
+                .payment{
+                    padding: 25px 0;
+                    text-align: left;
+                    p{
+                        font-weight: 600;
+                        font-size: 24px;
+                        color: $blackColor;
+                    }
+                    .btn{
+                        display: flex;
+                        justify-content: space-between;
+                        .credit{
+                            width: 100px;
+                            height: 35px;
+                            color: $blackColor;
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                        .bank{
+                            width: 100px;
+                            height: 35px;
+                            color: $whiteColor;
+                            font-weight: 400;
+                            font-size: 15px;
+                            background-color: $blackColor;
+                        }
+                        .paypal{
+                            width: 100px;
+                            height: 35px;
+                            color: $blackColor;
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .checkout{
+                    height: 40px;
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+                h6{
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+@media (max-width:730px) {
+    .form{
+        width: 100%;
+        display: block !important;
+        .left-form{
+            width: 100% !important;
+        }
+        .right-form {
+            width: 100% !important;
+        }
+    }
+}
+@media (max-width:540px) {
+    .form{
+        width: 100% !important;
+        .left-form{
+            display: none !important;
+        }
+        .left-form-media{
+            display: block !important;
+            margin-bottom: 30px;
+        }
+    }
+}

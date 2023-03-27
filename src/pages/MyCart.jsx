@@ -237,7 +237,7 @@ function MyCart() {
             </div>
 
             <Footer />
-            <Outlet />
+            
         </>);
 }
 
