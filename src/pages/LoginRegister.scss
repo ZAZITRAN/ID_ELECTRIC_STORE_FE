@@ -3,12 +3,12 @@ $whiteColor: #FAFAFA;
 $blackColor: #383838;
 $grayColor: #D0D0D2;
 
-svg {
-    color: $redColor;
-}
+
 
 .centerLogin {
-
+    svg {
+        color: $redColor;
+    }
     width: 100%;
     height: max-content;
     display: flex;

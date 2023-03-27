@@ -1,5 +1,7 @@
 import { Button, Form, Input, Select, ConfigProvider } from "antd";
-import { Footer, Header } from "antd/es/layout/layout";
+import Footer from "../components/component-recycle/Footer";
+import Header from "../components/component-recycle/Header";
+import { Link, Outlet } from "react-router-dom"
 import "./Checkout.scss"
 function Checkout() {
     return (

@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Product.scss"
 import { Button, ConfigProvider, Form, Input, Rate } from "antd";
-import Sider from 'antd/es/layout/Sider';
-import { Footer, Header } from 'antd/es/layout/layout';
+import Footer from "../components/component-recycle/Footer";
+import Header from "../components/component-recycle/Header";
+import { Link, Outlet } from "react-router-dom"
 
 
 

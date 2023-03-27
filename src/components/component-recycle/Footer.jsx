@@ -8,7 +8,7 @@ function Footer() {
             <div className="header-of-footer">
                 <div className="newLetter">
                     <div className="left-newLetter">
-                        <img src="./footerImg/Vector.png" alt="" />
+                        <img src="/footerImg/Vector.png" alt="" />
                         <div className="newLetter-text">
                             <p>Join our newsletter now!</p>
                             <span>Register now and get our latest updates and promos.</span>
@@ -29,11 +29,11 @@ function Footer() {
                     <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, sint dolor? Numquam quos ratione neque accusamus autem non vitae error, quas illum! Totam sed praesentium error magnam earum magni rem?</span><br />
                     <div className="call-mail">
                         <div className="call">
-                            <img src="./footerImg/Call.png" alt="" /><p>+1234567890</p>
+                            <img src="/footerImg/Call.png" alt="" /><p>+1234567890</p>
                         </div>
 
                         <div className="mail">
-                            <img src="./footerImg/Email.png" alt="" />  <p>lorem@lorem.com</p> </div>
+                            <img src="/footerImg/Email.png" alt="" />  <p>lorem@lorem.com</p> </div>
                         </div>
 
 
@@ -61,9 +61,9 @@ function Footer() {
                     <div className="footer-contact">
                         <p className="about_topic">Follow Us</p>
                         <div className="img">
-                            <img src="./footerImg/instagram.png" alt="" />
-                            <img src="./footerImg/twitter.png" alt="" />
-                            <img src="./footerImg/fb.png" alt="" />
+                            <img src="/footerImg/instagram.png" alt="" />
+                            <img src="/footerImg/twitter.png" alt="" />
+                            <img src="/footerImg/fb.png" alt="" />
                         </div>
                     </div>
                 </div>

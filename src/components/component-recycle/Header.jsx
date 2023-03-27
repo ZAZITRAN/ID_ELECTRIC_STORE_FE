@@ -4,10 +4,10 @@ function Header() {
         <>
   <header className="header">
     <div className="header__left">
-      <img src="imgHome/instagram.png" alt="" className="header-img" />
-      <img src="imgHome/facebook.png" alt="" className="header-img" />
-      <img src="imgHome/Twitter.png" alt="" className="header-img" />
-      <img src="imgHome/Linkedin.png" alt="" className="header-img" />
+      <img src="/imgHome/instagram.png" alt="" className="header-img" />
+      <img src="/imgHome/facebook.png" alt="" className="header-img" />
+      <img src="/imgHome/Twitter.png" alt="" className="header-img" />
+      <img src="/imgHome/Linkedin.png" alt="" className="header-img" />
     </div>
     <div className="header__right">
       <div className="header-right o">
@@ -15,13 +15,13 @@ function Header() {
         <div className="header-right-text">+12 345 6789 0</div>
       </div>
       <div className="header-right t">
-        <img src="imgHome/Emailred.png" alt="" className="header-img" />
+        <img src="/imgHome/Emailred.png" alt="" className="header-img" />
         <div className="header-right-text">support@tronix.com</div>
       </div>
     </div>
   </header>
   <div className="h__">
-    <img src="imgHome/Tronix.png" alt="" className="logo" />
+    <img src="/imgHome/Tronix.png" alt="" className="logo" />
     <div className="h-center">
       <img className="img1" src="imgHome/search (1).png" alt="" />
       <div className="center-input">
@@ -36,10 +36,10 @@ function Header() {
         <i className="fa-solid fa-magnifying-glass" />
       </div>
       <div className="bao-img2" data-shopping="10">
-        <img id="contentgio" src="imgHome/Shopping Bag.png" alt="" />
+        <img id="contentgio" src="/imgHome/Shopping Bag.png" alt="" />
       </div>
       <div className="bao-img3"  data-email="0">
-        <img id="contentemail" src="imgHome/Email.png" alt="" />
+        <img id="contentemail" src="/imgHome/Email.png" alt="" />
       </div>
       <a href="" className="signin">
         Sign In
