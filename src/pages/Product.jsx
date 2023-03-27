@@ -147,7 +147,6 @@ function Product() {
                 </ConfigProvider>
             </div>
         </div>
-        
         <Footer/>
     </> );
 }
