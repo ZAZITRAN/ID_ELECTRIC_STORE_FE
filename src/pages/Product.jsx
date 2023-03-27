@@ -42,8 +42,7 @@ function Product() {
                         </div>
                     )
                 })}
-            </Slider>
-                
+            </Slider>        
           
             </div>
             <div className="title">
