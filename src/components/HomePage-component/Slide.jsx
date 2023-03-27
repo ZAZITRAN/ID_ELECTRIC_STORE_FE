@@ -101,31 +101,31 @@ function Slide() {
     <div className="category__list">
 
       <div className="category__sun">
-            <img src="imgSlide/Laptop.png" alt="" />
+            <img src="/imgSlide/Laptop.png" alt="" />
           <div className="sun-text">Computer Laptop</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Smartphone.png" alt="" />
+            <img src="/imgSlide/Smartphone.png" alt="" />
           <div className="sun-text">Mobile & Tablet</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Camera.png" alt="" />
+            <img src="/imgSlide/Camera.png" alt="" />
           <div className="sun-text">Camera</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Tv And Remote.png" alt="" />
+            <img src="/imgSlide/Tv And Remote.png" alt="" />
           <div className="sun-text">TV & Smart Box</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Air Conditioner.png" alt="" />
+            <img src="/imgSlide/Air Conditioner.png" alt="" />
           <div className="sun-text">Home Appliance</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Speaker.png" alt="" />
+            <img src="/imgSlide/Speaker.png" alt="" />
           <div className="sun-text">Accessories</div>
       </div>
       <div className="category__sun">
-            <img src="imgSlide/Gamepad.png" alt="" />
+            <img src="/imgSlide/Gamepad.png" alt="" />
           <div className="sun-text">Other Categories
 </div>
       </div>

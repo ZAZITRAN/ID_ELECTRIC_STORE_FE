@@ -17,6 +17,7 @@ function Catagories() {
         </div>
 
         <div className="catagories__body">
+
           <div className="thanhloc">
             <div className="thanhloc-scroll">
               <div className="thanhloc-scroll__name">All Categories</div>
@@ -105,74 +106,122 @@ function Catagories() {
                 <div className="location-sun__name">Surabaya</div>
               </div>
             </div>
-            <div className="thanhloc-vote"></div>
+            <div className="thanhloc-location thanhloc-keoPrice">
+              <div className="thanhloc-keoPrice__text">Filter by Rating</div>
+
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                  
+               </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div className="location-sun">
+                <input type="checkbox" />
+                <div className="location-sun__name cata">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div className="filter-btn">Filter</div>
+            <div className="resetfilter-btn">Reset Filter</div>
+
           </div>
 
           <div className="sp-loc">
             <div className="list-sques">
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Laptop.png" alt="" />
+                  <img src="/catalogImg/Laptop.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Computer & Laptop</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Smartphone.png" alt="" />
+                  <img src="/catalogImg/Smartphone.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Mobile & Tablet</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Camera.png" alt="" />
+                  <img src="/catalogImg/Camera.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Camera</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Tv And Remote.png" alt="" />
+                  <img src="/catalogImg/Tv And Remote.png" alt="" />
                 </div>
                 <div className="sques-sun__text">TV & Smart Box</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Air Conditioner.png" alt="" />
+                  <img src="/catalogImg/Air Conditioner.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Home Appliance</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Smart Watch.png" alt="" />
+                  <img src="/catalogImg/Smart Watch.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Smart Watch</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Recording.png" alt="" />
+                  <img src="/catalogImg/Recording.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Microphone & Audio</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Gamepad.png" alt="" />
+                  <img src="/catalogImg/Gamepad.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Gaming</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Printer.png" alt="" />
+                  <img src="/catalogImg/Printer.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Printer</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Headset.png" alt="" />
+                  <img src="/catalogImg/Headset.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Accessories</div>
               </div>
               <div className="sques-sun">
                 <div className="sques-sun__img">
-                  <img src="catalogImg/Speaker.png" alt="" />
+                  <img src="/catalogImg/Speaker.png" alt="" />
                 </div>
                 <div className="sques-sun__text">Other</div>
               </div>
@@ -182,19 +231,19 @@ function Catagories() {
               <div className="featured-brand-name">Featured Brand</div>
               <div className="list-featured-brand__img">
                 <div className="featured-brand__img one">
-                  <img src="catalogImg/SimSong.png" alt="" />
+                  <img src="/catalogImg/SimSong.png" alt="" />
                 </div>
                 <div className="featured-brand__img two">
-                  <img src="catalogImg/Harps.png" alt="" />
+                  <img src="/catalogImg/Harps.png" alt="" />
                 </div>
                 <div className="featured-brand__img three">
-                  <img src="catalogImg/DiskVan.png" alt="" />
+                  <img src="/catalogImg/DiskVan.png" alt="" />
                 </div>
                 <div className="featured-brand__img four">
-                  <img src="catalogImg/Ikon.png" alt="" />
+                  <img src="/catalogImg/Ikon.png" alt="" />
                 </div>
                 <div className="featured-brand__img five">
-                  <img src="catalogImg/Strons.png" alt="" />
+                  <img src="/catalogImg/Strons.png" alt="" />
                 </div>
               </div>
             </div>

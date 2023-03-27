@@ -5,29 +5,29 @@ function Slide() {
     
     return ( 
         <>
-      <div class="slide-container">
+      <div className="slide-container">
 
-       <div class="btn-cha">
+       <div className="btn-cha">
 
-       <div class="slide-btn left">
-       <i class="fa-solid fa-chevron-left"></i>
+       <div className="slide-btn left">
+       <i className="fa-solid fa-chevron-left"></i>
        </div>
 
-    <div class="slide-btn right">
-      <i class="fa-solid fa-chevron-right"></i>
+    <div className="slide-btn right">
+      <i className="fa-solid fa-chevron-right"></i>
       </div>
 
       </div>
 
-      <div class="slide-show">
+      <div className="slide-show">
 
-           <div class="current-img">
-          <div class="current-img cr"></div>
-          <div class="current-img"></div>
-          <div class="current-img"></div>
-          <div class="current-img"></div>
+           <div className="current-img">
+          <div className="current-img cr"></div>
+          <div className="current-img"></div>
+          <div className="current-img"></div>
+          <div className="current-img"></div>
         </div>
-        <div class="slide-run" >
+        <div className="slide-run" >
            <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
            <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
            <img src="https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283" alt="" />
@@ -43,15 +43,15 @@ function Slide() {
 
 
 
-  <div class="category">
+  <div className="category">
 
-    <div class="category__text">Category</div>
+    <div className="category__text">Category</div>
 
-    <div class="category__list">
+    <div className="category__list">
 
-      <div class="category__sun">
+      <div className="category__sun">
             
-          <div class="sun-text">Computer Laptop</div>
+          <div className="sun-text">Computer Laptop</div>
       </div>
           
     </div>

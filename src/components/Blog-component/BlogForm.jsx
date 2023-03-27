@@ -1,5 +1,6 @@
 import "./blogform.scss";
 import "../HomePage-component/blog.scss";
+import { Link } from "react-router-dom";
 function BlogForm() {
     let arr = [1,1,1,1,1,1]
   return (
@@ -16,7 +17,7 @@ function BlogForm() {
         <div className="blog-page__body">
           <div className="blog-body-filter">
             <div className="blog-body-filter__search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
               <input type="text" placeholder="Search..." />
             </div>
 
@@ -25,27 +26,27 @@ function BlogForm() {
 
               <div className="blog-body-filter__listtext">
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Technology</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Blog</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Gadget</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Gaming</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>Reviews</div>
                 </div>
                 <div className="blog-body-filter__textsun">
-                  <i class="fa-solid fa-angle-right"></i>
+                  <i className="fa-solid fa-angle-right"></i>
                   <div>News</div>
                 </div>
               </div>
@@ -137,7 +138,7 @@ function BlogForm() {
                 {
                     arr.map((e , index)=>{
                         return(
-                 <div key={index} className="newarrival__sun cc">
+                 <Link to="http://localhost:3000/bloglist/123" key={index} className="newarrival__sun cc">
                   <div className="newarrival__img cc">
                     <img src="" alt="" />
                   </div>
@@ -159,13 +160,34 @@ function BlogForm() {
                   
 
 
-                </div>
+                </Link>
                         )
                     })
                 }
               </div>
             </div>
+            <div className="pagination">
+
+<div className="pagination__left">
+  <i class="fa-solid fa-chevron-left"></i>
+  <div className="fa-chevron-left__text">Previous</div>
+</div>
+
+<div className="pagination__number">
+  <div className="pagination__1 target">1</div>
+  <div className="pagination__2">2</div>
+  <div className="pagination__3">3</div>
+</div>
+
+<div className="pagination__right">
+  <div className="fa-chevron-left__text">Next</div>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+
+
+</div>
           </div>
+          
 
 
 
