@@ -86,11 +86,10 @@ $main-color:#F46B5B;
         }
         .in-fo-spbe{
             width: calc(60% - 50px);
-            height: 50%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            padding-top: 50px;
+            justify-content: space-evenly;
             padding-left: 50px;
             .limited-btn{
                 cursor: pointer;
@@ -113,6 +112,7 @@ $main-color:#F46B5B;
               }
               .text-spnho{
                 font-weight: 550;
+                margin: 15px 0;
 
               }
             

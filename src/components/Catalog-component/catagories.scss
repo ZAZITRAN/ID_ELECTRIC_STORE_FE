@@ -26,6 +26,70 @@ $main-color:#F46B5B;
         }
     }
 }
+#root{
+    position: relative;
+    width: 100%;
+}
+.filter-btn-icon{
+    max-width: max-content;
+    height: 30px;
+    background-color: #F46B5B;
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none;
+    
+
+}
+
+.thanh-loc-moble__con{
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.174);
+    width: 100%;
+    top: 0;
+    height: 100%;
+}
+.thanhloc.moble {
+    width: 50%;
+    padding: 0 2%;
+    border: 1px solid rgba(128, 128, 128, 0.523);
+    background-color: white;
+    display: block ;
+    border-radius: 0;
+    transform: translateX(-100%);
+    transition: all 0.2s linear ;
+    position: fixed;
+    top: 0;
+    overflow-y: scroll;
+    height: 100vh;
+
+}
+.thanhloc-keoPrice .renge-input {
+    width: 100%;
+    position: relative;
+}
+.thanhloc.moble .thanhloc-keoPrice .renge-input .renge-input__pt {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.301);
+    height: 4px;
+    top: 12px;
+    z-index: -2;
+    .fill{
+        position: absolute;
+        width: 50%;
+        background-color: #F46B5B;
+        height: 4px;
+        top: 0px;
+        z-index: -1;
+    }
+}
 .catagories__body{
     width: 100%;
     display: flex;
@@ -48,6 +112,7 @@ $main-color:#F46B5B;
         .thanhloc-scroll__list{
             overflow-y: scroll;
             height: 300px;
+            
         }
     }
 }
@@ -62,7 +127,11 @@ $main-color:#F46B5B;
     color: rgba(128, 128, 128, 0.521);
     margin-left: 8px;
    }
+
+
+
 }
+
 ::-webkit-scrollbar{
     
     width: 4px;
@@ -87,6 +156,7 @@ $main-color:#F46B5B;
     flex-wrap: wrap;
     .sques-sun{
         width: 22%;
+        min-width: 130px;
         height: 93px;
         border-radius: 20px;
         border: 1px solid rgba(128, 128, 128, 0.525);
@@ -186,6 +256,7 @@ $main-color:#F46B5B;
 .location-sun{
     display: flex;
     align-items: center;
+
     .location-sun__name{
         margin-left: 10px;
     }
@@ -252,6 +323,51 @@ $main-color:#F46B5B;
             padding: 5px 40px;
 
         }
+    }
+}
+@media only screen and (min-width:46.25em) and (max-width:63.9375em){
+    .thanhloc {
+      display: none;
+    }
+    .sp-loc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-btn-icon{
+        display: flex;
+        
+    
+    }
+}
+/* mobile */
+@media only screen and (max-width:46.1875em){
+    .thanhloc {
+        display: none;
+      }
+      .sp-loc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .featured-brand {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    .flash .flash__top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .filter-btn-icon{
+        display: flex;
+        
+    
     }
 }
   

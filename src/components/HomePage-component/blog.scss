@@ -71,3 +71,44 @@
 
     }
 }
+@media only screen and (min-width:46.25em) and (max-width:63.9375em){
+    .blog-body-filter {
+        width: 25%;
+        display: none;
+    }
+    .blog-body-listsp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .blog-body-listsp .newarrival.blog .newarrival__listsp .newarrival__sun.cc {
+        margin-bottom: 15px;
+        position: relative;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgba(128, 128, 128, 0.434);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 0 8px 1px rgba(128, 128, 128, 0.208);
+    }
+}
+/* mobile */
+@media only screen and (max-width:46.1875em){
+    .blog-body-filter {
+        width: 25%;
+        display: none;
+    }
+    .blog-body-listsp {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    
+}

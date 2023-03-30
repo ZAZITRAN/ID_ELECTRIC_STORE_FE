@@ -13,6 +13,7 @@ $main-color:#F46B5B;
 .list-btn-dieuhuong.cc{
     margin-top: 0;
 }
+
 .h__ {
 margin-bottom: 50px;
 }
@@ -34,7 +35,7 @@ margin-bottom: 50px;
     height: 32px;
 }
 .list-btn-dieuhuong div {
-    margin-right: 30px;
+    margin: 0 15px;
     font-size: small;
     cursor: pointer;
 }
@@ -56,6 +57,7 @@ margin-bottom: 50px;
         i{
             margin-top: 4px;
         }
+
     }
     .chuyenPage__allcata{
         color: $main-color;
@@ -70,4 +72,19 @@ margin-bottom: 50px;
     display: flex;
     justify-content: end;
     height: 40px;
+}
+@media only screen and (min-width:46.25em) and (max-width:63.9375em){
+   
+}
+/* mobile */
+@media only screen and (max-width:46.1875em){
+    .h-center.cc {
+        width: 35%;
+        display: none;
+        justify-content: start;
+    }
+    .list-btn-dieuhuong.cc{
+        margin-top: 0;
+        display: none;
+    }
 }
