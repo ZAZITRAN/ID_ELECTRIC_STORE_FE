@@ -1,5 +1,6 @@
 import { legacy_createStore as createStore } from "redux";
 import axios from 'axios'
+import { act } from "react-dom/test-utils";
 
 
 
@@ -10,6 +11,7 @@ let initialState = {
 };
 
 let productReducer = (state = initialState, action) => {
+
     /* ding nghia thong bao va logic thay doi state cho tung action */
     /* khi dinh nghia action thi ngam hieu action la object co 2 truong la type, [payload]// */
     /* state trong store la immutiable object====>  KHONG BAO GIO THAY DOI CAC THUOC TINH TRONG STATE */
@@ -25,105 +27,32 @@ let productReducer = (state = initialState, action) => {
             cart: [...action.payload]
         }
     }
-
-    if (action.type === "add-to-cart") {
+    if (action.type === "add-new-to-cart-from-detail") {
         let { payload } = action
         let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
-        if (findIndex === -1) {
-            cart.push({
-                id: payload.id,
-                price: payload.price,
-                number: 1,
-                name: payload.name,
-                isChecker: payload.isChecker
 
-            })
-            axios.post("http://localhost:8080/cart", {
-                id: payload.id,
-                price: payload.price,
-                number: 1,
-                name: payload.name,
-                isChecker: payload.isChecker
-
-            })
-                .then(function (response) {
-                    console.log(response);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-            return {
-                ...state,
-                cart: [...cart]
-
-            }
-
-        }
-
-        cart[findIndex].number = cart[findIndex].number + 1;
-        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
-            {
-                id: cart[findIndex].id,
-                name: cart[findIndex].name,
-                price: cart[findIndex].price,
-                number: cart[findIndex].number,
-                isChecker: cart[findIndex].isChecker
-
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        cart.push(payload)
         return {
             ...state,
             cart: [...cart]
         }
     }
-    if (action.type === "remove-from-cart") {
+    if (action.type === "edit-to-cart-from-detail") {
         let { payload } = action
-        console.log(payload);
         let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload)
-        console.log(findIndex);
-        cart.splice(findIndex,1)
-       
-        axios.delete(`http://localhost:8080/cart/${payload}`)
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-            return {
-                ...state,
-                cart: [...cart]
-            }
-        
-
+        let findIndex = cart.findIndex((item, i) => item.id === payload.id)
+        cart[findIndex].quantity = cart[findIndex].quantity + payload.quantity
+        return {
+            ...state,
+            cart: [...cart]
+        }
     }
     if (action.type === "increase") {
         let { payload } = action
         let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
-        cart[findIndex].number = cart[findIndex].number - 1;
-        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
-            {
-                id: cart[findIndex].id,
-                name: cart[findIndex].name,
-                price: cart[findIndex].price,
-                number: cart[findIndex].number,
-                isChecker: cart[findIndex].isChecker
+        let findIndex = cart.findIndex((item, i) => item.id === payload.id)
+        cart[findIndex].quantity = cart[findIndex].quantity + 1
 
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
         return {
             ...state,
             cart: [...cart]
@@ -132,134 +61,57 @@ let productReducer = (state = initialState, action) => {
     if (action.type === "decrease") {
         let { payload } = action
         let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
-        cart[findIndex].number = cart[findIndex].number + 1;
+        let findIndex = cart.findIndex((item, i) => item.id === payload.id)
+        cart[findIndex].quantity = cart[findIndex].quantity - 1
 
-        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
-            {
-                id: cart[findIndex].id,
-                name: cart[findIndex].name,
-                price: cart[findIndex].price,
-                number: cart[findIndex].number,
-                isChecker: cart[findIndex].isChecker
-
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
         return {
             ...state,
             cart: [...cart]
         }
     }
-    if(action.type==="remove-checker"){
-        let { payload } = action
-        let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
-        cart[findIndex].isChecker=false;
-
-        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
-            {
-                id: cart[findIndex].id,
-                name: cart[findIndex].name,
-                price: cart[findIndex].price,
-                number: cart[findIndex].number,
-                isChecker: cart[findIndex].isChecker
-
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        return {
-            ...state,
-            cart: [...cart]
-        }
-
-    }
-    if(action.type==="checker"){
-        let { payload } = action
-        let { cart } = state
-        let findIndex = cart.findIndex((e, i) => e.id === payload.id)
-        cart[findIndex].isChecker=true;
-
-        axios.put(`http://localhost:8080/cart/${cart[findIndex].id}`,
-            {
-                id: cart[findIndex].id,
-                name: cart[findIndex].name,
-                price: cart[findIndex].price,
-                number: cart[findIndex].number,
-                isChecker: cart[findIndex].isChecker
-
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        return {
-            ...state,
-            cart: [...cart]
-        }
-
-    }
-    if(action.type ==="remove-all"){
+    if (action.type === "remove-check-all") {
         let { cart } = state
         for (let i = 0; i < cart.length; i++) {
-            cart[i].isChecker=false
-            axios.put(`http://localhost:8080/cart/${cart[i].id}`,
-            {
-                id: cart[i].id,
-                name: cart[i].name,
-                price: cart[i].price,
-                number: cart[i].number,
-                isChecker:cart[i].isChecker
+            cart[i].isChecker = false
 
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        }
-        return {
-            ...state,
-            cart: [...cart]
+            return {
+                ...state,
+                cart: [...cart]
+            }
         }
     }
-    if(action.type ==="check-all"){
+    if (action.type === "check-all") {
         let { cart } = state
         for (let i = 0; i < cart.length; i++) {
-            cart[i].isChecker=true
-            axios.put(`http://localhost:8080/cart/${cart[i].id}`,
-            {
-                id: cart[i].id,
-                name: cart[i].name,
-                price: cart[i].price,
-                number: cart[i].number,
-                isChecker:cart[i].isChecker
-
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+            cart[i].isChecker = true
         }
         return {
             ...state,
             cart: [...cart]
         }
-    }
 
+    }
+    if (action.type === "checked") {
+        let { cart } = state
+        let { payload } = action
+        let findIndex = cart.findIndex((item, i) => item.id === payload.id)
+        cart[findIndex].isChecker = true
+        return {
+            ...state,
+            cart: [...cart]
+        }
+    }
+    if (action.type === "remove-checked") {
+        let { cart } = state
+        let { payload } = action
+        let findIndex = cart.findIndex((item, i) => item.id === payload.id)
+        cart[findIndex].isChecker = false
+        console.log(cart);
+        return {
+            ...state,
+            cart: [...cart]
+        }
+    }
     return state;
 
 };

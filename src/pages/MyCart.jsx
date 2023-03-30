@@ -7,7 +7,7 @@ import "./MyCart.scss"
 import Checkbox from "../components/MyCart-component/mycartCheckbox";
 
 import React, { useEffect, useState } from "react";
-import { List, ConfigProvider } from "antd";
+import { List, ConfigProvider, Modal, Button } from "antd";
 import axios from "axios"
 
 
@@ -16,7 +16,25 @@ import axios from "axios"
 
 
 function MyCart() {
+    const [loading, setLoading] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [title, setTitle] = useState("")
+    const [title2, setTitle2] = useState("")
     const [isCheckAll, setIsCheckAll] = useState(false);
+
+    const handleOk = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            setOpen(false);
+        }, 3000);
+    };
+    const handleCancel = () => {
+        window.location.reload()
+
+    };
+
+
 
     let cart = useSelector((state) => state.cart)
 
@@ -37,28 +55,99 @@ function MyCart() {
          setIsCheckAll(true)
      } */
     const handleSelectAll = e => {
+
         if (isCheckAll === true) {
-            setIsCheckAll(false)
-            dispatch({ type: "remove-all" })
+            let users = [];
+            let promises = [];
+            for (let i = 0; i < cart.length; i++) {
+                promises.push(
+                    axios.put(`http://localhost:8080/cart/${cart[i].id}`,
+                        {
+                            id: cart[i].id,
+                            quantity: cart[i].quantity,
+                            name: cart[i].name,
+                            exportPrice: cart[i].exportPrice,
+                            isChecker: false
+                        })
+                        .then(response => {
+                            // do something with response
+                            users.push(response);
+
+                        })
+                        .catch(err => {
+                            setOpen(true)
+                            setTitle("System Error!!")
+                            setTitle2("Please try again!!!")
+                        })
+                )
+            }
+
+            Promise.all(promises).then(() => {
+
+
+                setIsCheckAll(false)
+                dispatch({ type: "remove-check-all" })
+
+
+            }
+            );
+
+
 
         } else {
             setIsCheckAll(true)
             dispatch({ type: "check-all" })
         }
-        /*  setIsCheckAll(!isCheckAll);
-         setIsCheck(cart.map(li => li.id));
-         if (isCheckAll) {
-             setIsCheck([]);
-         } */
+
 
     };
+
 
     const handleClick = (item) => {
         console.log(item);
         if (item.isChecker === true) {
-            dispatch({ type: "remove-checker", payload: item })
+            let findIndexCart = cart.findIndex((e, i) => e.id === item.id)
+
+            axios.put(`http://localhost:8080/cart/${cart[findIndexCart].id}`,
+                {
+
+                    id: cart[findIndexCart].id,
+                    quantity: cart[findIndexCart].quantity + 1,
+                    name: cart[findIndexCart].name,
+                    exportPrice: cart[findIndexCart].exportPrice,
+                    isChecker: cart[findIndexCart].isChecker
+                })
+                .then(res => {
+                    dispatch({ type: "remove-checked", payload: item })
+                })
+                .catch(err => {
+                    setOpen(true)
+                    setTitle("System Error!!")
+                    setTitle2("Please try again!!!")
+                })
+
+
         } else {
-            dispatch({ type: "checker", payload: item })
+            let findIndexCart = cart.findIndex((e, i) => e.id === item.id)
+
+            axios.put(`http://localhost:8080/cart/${cart[findIndexCart].id}`,
+                {
+
+                    id: cart[findIndexCart].id,
+                    quantity: cart[findIndexCart].quantity + 1,
+                    name: cart[findIndexCart].name,
+                    exportPrice: cart[findIndexCart].exportPrice,
+                    isChecker: cart[findIndexCart].isChecker
+                })
+                .then(res => {
+                    dispatch({ type: "checked", payload: item })
+
+                })
+                .catch(err => {
+                    setOpen(true)
+                    setTitle("System Error!!")
+                    setTitle2("Please try again!!!")
+                })
         }
         /*  const { id, checked } = e.target; */
         /* setIsCheck([...isCheck, id]);
@@ -67,21 +156,58 @@ function MyCart() {
         } */
     };
     const increase = (item) => {
-        dispatch(
+        let findIndexCart = cart.findIndex((e, i) => e.id === item.id)
+
+        axios.put(`http://localhost:8080/cart/${cart[findIndexCart].id}`,
             {
-                type: "increase",
-                payload: item
-            }
-        )
+
+                id: cart[findIndexCart].id,
+                quantity: cart[findIndexCart].quantity + 1,
+                name: cart[findIndexCart].name,
+                exportPrice: cart[findIndexCart].exportPrice,
+                isChecker: cart[findIndexCart].isChecker
+            })
+            .then(res => {
+                dispatch(
+                    {
+                        type: "increase",
+                        payload: item
+                    }
+                )
+            })
+            .catch(err => {
+                setOpen(true)
+                setTitle("System Error!!")
+                setTitle2("Please try again!!!")
+            })
+
     }
     const decrease = (item) => {
-        dispatch(
+        let findIndexCart = cart.findIndex((e, i) => e.id === item.id)
+        axios.put(`http://localhost:8080/cart/${cart[findIndexCart].id}`,
             {
-                type: "decrease",
-                payload: item
 
-            }
-        )
+                id: cart[findIndexCart].id,
+                quantity: cart[findIndexCart].quantity - 1,
+                name: cart[findIndexCart].name,
+                exportPrice: cart[findIndexCart].exportPrice,
+                isChecker: cart[findIndexCart].isChecker
+            })
+            .then(res => {
+                dispatch(
+                    {
+                        type: "decrease",
+                        payload: item
+
+                    }
+                )
+            })
+            .catch(err => {
+                setOpen(true)
+                setTitle("System Error!!")
+                setTitle2("Please try again!!!")
+            })
+
     }
     const remove = (id) => {
         dispatch({
@@ -93,7 +219,7 @@ function MyCart() {
     let totalPrice = 0
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].isChecker === true) {
-            totalPrice += cart[i].number * cart[i].price
+            totalPrice += cart[i].quantity * cart[i].exportPrice
         }
 
     }
@@ -167,14 +293,14 @@ function MyCart() {
                                                 <div className="right-list">
                                                     <div className="bill-product">
                                                         <p className="name">{item.name}</p>
-                                                        <p className="price">${item.price}</p>
+                                                        <p className="price">${item.exportPrice}</p>
                                                         <div className="quantity">
-                                                            <button onClick={() => increase(item)} disabled={item.number === 0 ? true : false} className="img">
+                                                            <button onClick={() => decrease(item)} disabled={item.number === 0 ? true : false} className="img">
                                                                 <img src="./MyCart/decrease.png" alt="" />
                                                             </button>
 
-                                                            <p>{item.number}</p>
-                                                            <button onClick={() => decrease(item)} className="img">
+                                                            <p>{item.quantity}</p>
+                                                            <button onClick={() => increase(item)} className="img">
                                                                 <img src="./MyCart/increase.png" alt="" />
                                                             </button>
                                                         </div>
@@ -237,7 +363,34 @@ function MyCart() {
             </div>
 
             <Footer />
-            
+            <Modal
+                closable={false}
+                open={open}
+                className="modal"
+                onOk={handleOk}
+                onCancel={handleCancel}
+                footer={[
+                    <Button key="back" onClick={handleCancel}>
+                        Return
+                    </Button>,
+
+                    <Button
+
+                        style={title === "System Error!!" ? { display: "none" } : { display: "block" }}
+                        key="link"
+                        href="/mycart"
+                        type="primary"
+                        loading={loading}
+                        onClick={handleOk}
+                    >
+                        Go To Cart
+                    </Button>,
+                ]}
+            >
+                <h1>{title}</h1>
+                <p>{title2}</p>
+            </Modal>
+
         </>);
 }
 
