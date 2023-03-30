@@ -1,7 +1,28 @@
 import "./header.scss"
+import { useSelector,useDispatch } from "react-redux";
+import axios from "axios";
+import React, {useEffect} from "react";
 function Header() {
+  let dispatch=useDispatch()
+  useEffect(()=>{
+      
+      axios.get("http://localhost:3000/cart")
+      .then( res=>{
+        
+          dispatch({type:"save-cart",payload:res.data})
+      })
+      .catch((err)=>console.log(err));
+  },[]) 
+  let cart=useSelector((state)=>state.cart);
+  console.log(cart);
+  let total=0
+  for (let i = 0; i < cart.length; i++) {
+    total=total+cart[i].quantity
+    console.log(typeof cart[i].quantity );
+  }
     return ( 
         <>
+        {total}
   <header className="header">
     <div className="header__left">
       <img src="/imgHome/instagram.png" alt="" className="header-img" />
