@@ -3,10 +3,23 @@ import "./slide.scss"
 
 function Slide() {
   let arr = [
-    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
-    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
-    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
-    "https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283",
+    { 
+      sliderBackground:"https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283"
+    , sliderDescription:"Better Devices for Better Life"
+},
+{ 
+  sliderBackground:"https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283"
+, sliderDescription:"Better Devices for Better Life"
+},
+{ 
+  sliderBackground:"https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283"
+, sliderDescription:"Better Devices for Better Life"
+},
+{ 
+  sliderBackground:"https://firebasestorage.googleapis.com/v0/b/uploadimg-a9a88.appspot.com/o/image%2Fimgbnb%20(4).jpeg?alt=media&token=a98bf1fa-c525-4841-a5b2-4fed3e909283"
+, sliderDescription:"Better Devices for Better Life"
+},
+   
 
   ]
   const [data , setData] = useState(arr)
@@ -28,7 +41,8 @@ function Slide() {
       })
       
     }
-  }, 5000);
+  }, 15000);
+
   return () => clearInterval(timer)
   }, [])
 
@@ -39,6 +53,7 @@ function Slide() {
       }else{
         setRun(data.length * 100 - 100)
       }
+      
     }
     function handletien() {
       if (run1 < data.length * 100 - 100) {
@@ -78,7 +93,13 @@ function Slide() {
          >
           { data.map((item , index)=>{
               return (
-                     <img key={index} src={item} alt="" />
+                <div className="baoimgvadescip">
+                  <p>{item.sliderDescription}</p>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </div>
+                  <img key={index} src={item.sliderBackground} alt="" />
+                  <button>Shop now</button>
+                </div>
+                     
                 
               )
             })
